@@ -11,9 +11,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: users.qacrckx.mongodb.net
-      MONGODB_USERNAME: swapon
-      MONGODB_PASSWORD: 8kjvtP09I2yc1v91
-      # MONGODB_DB_NAME: ${{ env.MONGODB_DB_NAME }}
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
