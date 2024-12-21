@@ -9,6 +9,7 @@ env:
   # MONGODB_URI: mongodb://localhost:27017
 jobs:
   test:
+    environment: testing
     env:
       MONGODB_CLUSTER_ADDRESS: users.qacrckx.mongodb.net
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
